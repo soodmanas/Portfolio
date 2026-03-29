@@ -1,61 +1,33 @@
 ---
 layout: project
 type: project
-image: images/cotton-square.png
-title: Cotton
-permalink: projects/cotton
+image: images/Robot.png
+title: FIRST Robotics — Software Lead
+permalink: projects/FIRST
 # All dates must be YYYY-MM-DD format!
-date: 2014-04-12
+date: 2025-05-01
+order: 2
 labels:
-  - Lisp
-  - GitHub
-summary: A text adventure game I developed for ICS 313.
+  - Java
+  - Kotlin
+  - Robotics
+  - Localization
+summary: Led the software team for a world-finalist FIRST Robotics team; built a 36,000+ line high-performance control and localization stack enabling top competition performance.
 ---
 
-<img class="ui image" src="{{ site.baseurl }}/images/cotton-header.png">
+<div class="ui small rounded images">
+  <img class="ui image" src="../images/Bezier_Pathing.png">
+  <img class="ui image" src="../images/Chessboard.png">
+  <img class="ui image" src="../images/Homography_Transform.png">
+</div>
 
-Cotton is a horror-esque text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+I led my FIRST Robotics software team, a role where I architected and maintained a large, high-performance software stack. This Java/Kotlin codebase, which I personally contributed over 36,000 lines of code to, helped us achieve the highest solo score of over 4,500 teams worldwide.
 
-To give you a flavor of the game, here is an excerpt from one run:
+Key technical contributions:
 
-<hr>
+- Architected a 36,000+ line Java/Kotlin software stack as Software Lead for a world-finalist team, achieving the highest solo score among 4,500 teams.
+- Developed a real-time localization system by fusing ML vision, odometry, and ultrasonic data with Kalman Filters for precise on-field navigation.
+- Implemented a motion-profiled Bézier curve follower and managed complex concurrency with Kotlin Coroutines and Finite State Machines (FSMs) for parallelized autonomous execution.
+- Onboarded and trained 12 new student software developers over 3 years, ensuring our technical excellence would be sustained long after I graduated.
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
-
+I designed robust autonomous routines with motion profiling and Bézier-based path following, integrated a TensorFlow vision model into the localization pipeline, and managed concurrency and lifecycle concerns with Kotlin Coroutines and FSMs to ensure deterministic, reliable autonomous behavior under competition constraints.

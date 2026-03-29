@@ -2,4 +2,92 @@
 layout: default
 ---
 
-{% include {{ site.theme-home }} %}
+<div class="ui horizontal scrolling cards">
+  <!-- ARC Project -->
+  <div class="card">
+    <div class="image">
+      <img src="{{ site.baseurl }}/images/ARC.png">
+    </div>
+    <div class="content">
+      <span class="header">ARC</span>
+      <div class="meta">
+        <span class="date">2023</span>
+      </div>
+      <div class="description">
+        Description of ARC project.
+      </div>
+    </div>
+  </div>
+
+  <!-- FIRST Project -->
+  <div class="card">
+    <div class="image">
+      <img src="{{ site.baseurl }}/images/Robot.png">
+    </div>
+    <div class="content">
+      <span class="header">FIRST</span>
+      <div class="meta">
+        <span class="date">2024</span>
+      </div>
+      <div class="description">
+        Description of FIRST project.
+      </div>
+    </div>
+  </div>
+
+  <!-- Apple Project -->
+  <div class="card">
+    <div class="image">
+      <img src="{{ site.baseurl }}/images/Ventura_Product.png">
+    </div>
+    <div class="content">
+      <span class="header">Apple</span>
+      <div class="meta">
+        <span class="date">2025</span>
+      </div>
+      <div class="description">
+        Description of Apple project.
+      </div>
+    </div>
+  </div>
+
+  <!-- Flux Project -->
+  <div class="card">
+    <div class="image">
+      <img src="{{ site.baseurl }}/images/Flux_Front.png">
+    </div>
+    <div class="content">
+      <span class="header">Flux</span>
+      <div class="meta">
+        <span class="date">2025</span>
+      </div>
+      <div class="description">
+        Description of Flux project.
+      </div>
+    </div>
+  </div>
+
+  <!-- Onewheel Project -->
+  <div class="card">
+    <div class="image">
+      <img src="{{ site.baseurl }}/images/Onewheel_Front.JPG">
+    </div>
+    <div class="content">
+      <span class="header">Onewheel</span>
+      <div class="meta">
+        <span class="date">2025</span>
+      </div>
+      <div class="description">
+        Description of Onewheel project.
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ui.horizontal.scrolling.cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+</style>

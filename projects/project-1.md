@@ -1,44 +1,27 @@
 ---
 layout: project
 type: project
-image: images/micromouse.jpg
-title: Micromouse
-permalink: projects/micromouse
+image: images/Onewheel_Front.JPG
+title: Onewheel
+permalink: projects/Onewheel
 # All dates must be YYYY-MM-DD format!
-date: 2015-07-01
+date: 2025-06-01
+order: 6
 labels:
-  - Robotics
+  - High Current Electronics
   - Arduino
   - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+  - Control
+summary: I built a self-balancing hoverboard device capable of outputting 1000W of power and speeds of over 25 MPH
 ---
 
 <div class="ui small rounded images">
-  <img class="ui image" src="../images/micromouse-robot.png">
-  <img class="ui image" src="../images/micromouse-robot-2.jpg">
-  <img class="ui image" src="../images/micromouse.jpg">
-  <img class="ui image" src="../images/micromouse-circuit.png">
+  <img class="ui image" src="../images/Onewheel_Front.JPG">
 </div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+I built and programmed a Onewheel board which travels in the direction the hoverboard is tilting. It is fitted with 2 6-axis IMUs for relative angle tilt; absolute angle of the surface was calculated by regressing an acceleration vs angle curve at constant duty cycle. To detect if someone is standing on the pads, I mounted force-sensitive resistors and 10K resistors in series, read in the voltage across the FSR through analog IN, and mapped that value to whether the force measurement surpassed a certain threshold.
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
-
-Here is some code that illustrates how we read values from the line sensors:
-
-```js
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
-```
-
-You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
+I attempted to do velocity control manually with a traditional ESC, but it was unsuccessful as balance requires rapid switching between positive and negative voltage which my ESC could not handle. Therefore, I upgraded to a VESC-based system, which allowed me to push reverse voltage to the motor. Additionally, it came with some convenient built-in libraries to build a balancing control system in the hardware.
 
 
 

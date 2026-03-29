@@ -1,39 +1,29 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Aadit Noronha",
     "label": "Student",
-    "picture": "https://techfolios.github.io/template/images/molly.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
+    "picture": "/images/Headshot.png",
+    "email": "aadit.noronha@gmail.com",
+    "phone": "(408) 482 3517",
+    "website": "https://manassood.github.io/Portfolio",
+    "summary": "I am a student passionate about robotics, embedded systems, and software engineering. My projects span autonomous robots, high-current electronics, and full-stack iOS applications.",
     "location": {
       "address": "",
-      "postalCode": "96822",
-      "city": "Honolulu",
+      "postalCode": "",
+      "city": "",
       "countryCode": "USA",
-      "region": "Hawaii"
+      "region": ""
     },
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "manassood",
+        "url": "https://github.com/manassood"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
-      },
-      {
-        "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "aaditnoronha",
+        "url": "https://linkedin.com/in/aaditnoronha"
       }
     ]
   },
@@ -57,6 +47,18 @@
     }
   ],
   "skills": [
+    {
+      "name": "Robotics",
+      "level": "",
+      "keywords": [
+        "ROS2",
+        "Path Planning",
+        "Localization",
+        "Control Systems",
+        "Computer Vision (OpenCV)",
+        "Kalman Filters"
+      ]
+    },
     {
       "name": "Languages and Frameworks",
       "level": "",

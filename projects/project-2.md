@@ -1,25 +1,38 @@
 ---
 layout: project
 type: project
-image: images/vacay-square.png
-title: Vacay
-permalink: projects/vacay
+image: images/Ventura_Product.png
+title: Apple — Seesaw & Ventura Necklace
+permalink: projects/apple-projects
 # All dates must be YYYY-MM-DD format!
-date: 2015-12-15
+date: 2024-07-01
+draft: true
 labels:
   - Javascript
-  - Meteor
-  - MongoDB
-  - GitHub
-summary: A responsive web application for travel planning that my team developed in ICS 415.
+  - Swift
+  - Python
+  - Electrical Design
+  - Computer Vision
+
+summary: "Two summer projects at Apple: an energy-harvesting seesaw with an iOS data app, and an assistive necklace for visually impaired users using facial/object recognition."
 ---
 
-<img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
+<div class="ui small rounded images">
+  <img class="ui medium right floated rounded image" src="../images/Seesaw_Stack.png">
+  <img class="ui medium right floated rounded image" src="../images/Seesaw_Electrical.png">
+  <img class="ui image" src="../images/Ventura_Product.png">
+</div>
 
-Vacay is a web application that I helped create as a team project in ICS 415, Spring 2015. The project helped me learn how to design and implement a responsive web site.
+Seesaw (Apple Year 1)
 
-Vacay is implemented using [Meteor](http://meteor.com), a JavaScript application platform. Within two weeks, we created a website that implements several types of reservations including flights, hotels, and car rentals.
+I spent a summer at a camp hosted by Apple building an energy-generating seesaw with a full-stack iOS data app. I aided in the electrical design and implementation of the seesaw, capturing instantaneous power output through a current sensor on a Raspberry Pi and sending that data via HTTP to a Flask backend. I also implemented local data storage for user-based records with a plan to migrate to cloud storage.
 
-In this project I gained experience with full-stack web application design and associated technologies, including [MongoDB](http://mongodb.com) for database storage, the [Twitter Bootstrap](http://getbootstrap.com/) CSS Framework for the user interface, and Javascript for both client and server-side programming. 
- 
-Source: <a href="https://github.com/theVacay/vacay"><i class="large github icon"></i>theVacay/vacay</a>
+Ventura Necklace (Apple Year 2)
+
+Invited back in 2024 to mentor and lead a new project at Apple, my team developed a necklace for visually impaired users. This device provided environmental awareness via auditory and haptic feedback, driven by facial and object recognition models I implemented using OpenCV's Haar Cascades. I designed a priority-queue architecture to deliver timely, sequential, and duplicate-free information to the user via the ElevenLabs TTS API.
+
+Highlights:
+
+- Captured and streamed sensor data from embedded hardware to a Flask backend, paired with an iOS frontend for visualization and user interaction.
+- Built facial/object recognition pipelines using OpenCV, integrated with a prioritized messaging system to surface the most relevant contextual information.
+- Designed low-latency, duplicate-free notification delivery using a priority queue and ElevenLabs TTS for natural auditory feedback.

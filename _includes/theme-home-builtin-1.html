@@ -6,49 +6,36 @@
 {% assign num_projects = project_pages.size %}
 
 <div style="height: 100%; margin-top: -75px" class="ui middle aligned grid ">
-
   <div class="column">
-
     <div style="position: relative; top: 75px; z-index: 1" class="ui fluid centered small circular image">
-      <img src="{{ site.data.bio.basics.picture }}">
+      <img src="{{ site.baseurl }}{{ site.data.bio.basics.picture }}">
     </div>
-
-
-    <div style="max-width: 500px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
-
+    <div style="max-width: 1100px; padding-top: 75px; margin-top: 0px" class="ui fluid centered card">
       <div class="center aligned content">
-        <span class="header">{{ site.data.bio.basics.name }}</span>
-        <div class="meta">
-          <span class="date">{{ site.data.bio.basics.label }}</span>
-        </div>
-        <div class="left aligned description">
-          {{ site.data.bio.basics.summary }}
-        </div>
+        <span class="header" style="font-size:2.2rem;">Welcome to My Portfolio</span>
+        <div class="description" style="font-size:1.15rem; margin:1rem 0 0.5rem;">Explore my work below. Scroll to see all {{ num_projects }} projects. Click any project for a detailed page.</div>
       </div>
       <div class="center aligned content">
-        <div class="description">
-          Interests:
-          {% for interest in site.data.bio.interests %}
-            {{ interest.name }}{% if forloop.last != true %}, {% endif %}
+        <div class="ui stackable five cards" style="overflow-y: auto; max-height: 70vh; gap:2.5rem;">
+          {% assign project_pages = site.pages | where: "type", "project" | where_exp: "page", "page.draft != true and page.order" | sort: "order" %}
+          {% for page in project_pages %}
+            <a class="card" href="{{ site.baseurl}}{{ page.url }}" style="width: 420px; min-width: 320px; max-width: 520px; display: inline-block; cursor: pointer;">
+              <div class="image" style="aspect-ratio: 1/1; overflow: hidden;">
+                <img src="{{ site.baseurl }}/{{ page.image }}" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="content">
+                <span class="header" style="font-size:1.25rem;">{{ page.title }}</span>
+                <div class="meta">
+                  <span class="date">{{ page.date }}</span>
+                </div>
+                <div class="description">
+                  {{ page.summary }}
+                </div>
+              </div>
+            </a>
           {% endfor %}
-
         </div>
-      </div>
-      <div class="center aligned extra content">
-        {% include home-network-links.html %}
-      </div>
-      <div class="center aligned content">
-        <a href="{{ site.baseurl}}/projects/">
-          <button class="ui basic button">Projects ({{ num_projects }})</button>
-        </a>
-        <a href="{{ site.baseurl}}/essays/">
-          <button class="ui basic button">Essays ({{ num_essays }})</button>
-        </a>
-        <a href="{{ site.baseurl}}/bio/">
-          <button class="ui basic button">{{ site.bio-page-label }}</button>
-        </a>
       </div>
     </div>
   </div>
-
 </div>
